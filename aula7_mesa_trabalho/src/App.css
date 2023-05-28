@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(140deg, #949494fc 0%, #7076bc 50%, #4441d6 75%);
+  border-radius: 5px;
+}
+
+button {
+  margin: 2px;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+}

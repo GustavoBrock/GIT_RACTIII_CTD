@@ -1,0 +1,7 @@
+.div {
+    background-color: #1a1a1a;
+    border: 4px solid rgb(255, 255, 255);
+    background-image: linear-gradient(140deg, #949494fc 0%, #7076bc 50%, #4441d6 75%);
+    border-radius: 5px;
+    margin: 3%;
+}
