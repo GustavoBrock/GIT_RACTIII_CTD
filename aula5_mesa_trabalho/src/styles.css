@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 5px;
+  background-color: #484d50;
+}
+
+
+table{
+  display: grid;
+  grid-template-columns: 1fr ;
+border: solid whitesmoke 1px;
+border-radius: 1%;
+} 
+
+
