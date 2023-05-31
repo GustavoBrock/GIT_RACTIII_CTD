@@ -4,3 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+
+h4{
+  background: linear-gradient(to bottom right, #33ccff 0%, #ffad99 100%);;
+  border-radius: 10px;
+    
+}

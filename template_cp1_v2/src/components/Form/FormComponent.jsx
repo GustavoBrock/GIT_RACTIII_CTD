@@ -44,13 +44,18 @@ function FormComponent() {
 
     /// Função que valida os campos do formulário
     const formValidator = () => {
+        const numberRegex = /\d/; // Expressão regular para verificar se há pelo menos um número
+        const trimmedAnimeName = AnimeName.trim(); // Remover espaços em branco no inicio e final
 
-        if (AnimeName.length >= 2 && AnimeImageUrl.length > 0) {
-            setFormIsValid(true);
-        } else {
-            setFormIsValid(false);
+        for (let i = 0; i < AnimeImageUrl.length; i++) {
+            if (trimmedAnimeName.length >= 3 && AnimeImageUrl.length > 5 && numberRegex.test(AnimeImageUrl[i])) {
+                setFormIsValid(true);
+                return; // Se encontrar um elemento válido, define formIsValid como true e retorna
+            }
         }
-    }
+
+        setFormIsValid(false); // Se não encontrar nenhum elemento válido, define formIsValid como false
+    };
 
     return (
         <>
@@ -75,27 +80,25 @@ function FormComponent() {
                 />
 
 
-                
-
                 <button
                     onClick={handleButtonClick}
                     disabled={!formIsValid}
                 >Salvar</button>
             </div>
-
+            <br></br>
             <CardsListComponent>
-                    {
-                        AnimeList.map(AnimeCard => {
-                            return (
-                                <CardComponent
-                                    key={AnimeCard.name}
-                                    name={AnimeCard.name}
-                                    imageUrl={AnimeCard.image}
-                                />
-                            );
-                        })
-                    }
-                </CardsListComponent>
+                {
+                    AnimeList.map(AnimeCard => {
+                        return (
+                            <CardComponent
+                                key={AnimeCard.name}
+                                name={AnimeCard.name}
+                                imageUrl={AnimeCard.image}
+                            />
+                        );
+                    })
+                }
+            </CardsListComponent>
         </>
     );
 }

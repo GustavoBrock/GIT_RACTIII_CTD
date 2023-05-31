@@ -11,8 +11,10 @@
 }
 
 .img {
+    height: 55%;
     width: 80%;
     border-radius: 5%;
+    
 }
 
 .container {
@@ -22,5 +24,6 @@
     margin-bottom: 5%;
     border-radius: 5%;
     color: whitesmoke;
-    background-color: #1b207bd0
+    background: linear-gradient(to bottom right, #33ccff 0%, #ffeb99 100%);;
+    box-shadow: 5px 5px 15px whitesmoke;
 }

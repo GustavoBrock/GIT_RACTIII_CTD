@@ -1,8 +1,9 @@
 .container {
     padding-top: 2%;
     padding-bottom: 5%;
-    border-radius: 5%;
-    background-color: #bab9b9
+    border-radius: 10px;
+    background-color: #878787f5;
+    width: 100%;
 }
 
 .input {
